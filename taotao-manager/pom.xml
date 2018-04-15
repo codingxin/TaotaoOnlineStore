@@ -40,7 +40,7 @@
 				<configuration>
 					<!-- 访问不需要加项目名,localhost:8081 -->
 					<path>/</path>
-					<port>8080</port>
+					<port>8083</port>
 				</configuration>
 			</plugin>
 		</plugins>

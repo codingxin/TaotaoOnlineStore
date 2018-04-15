@@ -1,0 +1,11 @@
+com\taotao\dao\TbContentDao.class
+com\taotao\dao\TbItemDescDao.class
+com\taotao\dao\TbItemDao.class
+com\taotao\dao\TbItemParamDao.class
+com\taotao\dao\TbOrderItemDao.class
+com\taotao\dao\TbOrderDao.class
+com\taotao\dao\TbItemCatDao.class
+com\taotao\dao\TbOrderShippingDao.class
+com\taotao\dao\TbContentCategoryDao.class
+com\taotao\dao\TbUserDao.class
+com\taotao\dao\TbItemParamItemDao.class
