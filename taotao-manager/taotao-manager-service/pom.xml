@@ -1,28 +1,24 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.zhang</groupId>
+		<groupId>com.taotao</groupId>
 		<artifactId>taotao-manager</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>taotao-manager-service</artifactId>
 	<packaging>war</packaging>
-
 	<dependencies>
 		<dependency>
-			<groupId>com.zhang</groupId>
+			<groupId>com.taotao</groupId>
 			<artifactId>taotao-manager-dao</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
 		<dependency>
-			<groupId>com.zhang</groupId>
+			<groupId>com.taotao</groupId>
 			<artifactId>taotao-manager-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -52,41 +48,28 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 		</dependency>
-
-		<!-- 添加dubbo相关的架包 -->
-		<!-- dubbo相关 -->
+		<!-- dubbo相关的jar包 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
 			<exclusions>
 				<exclusion>
-					<groupId>org.springframework</groupId>
 					<artifactId>spring</artifactId>
+					<groupId>org.springframework</groupId>
 				</exclusion>
 				<exclusion>
-					<groupId>org.jboss.netty</groupId>
 					<artifactId>netty</artifactId>
+					<groupId>org.jboss.netty</groupId>
 				</exclusion>
 			</exclusions>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>com.github.sgroschupf</groupId>
 			<artifactId>zkclient</artifactId>
 		</dependency>
-
-
-
-
 	</dependencies>
-
-
-
-
-
 </project>

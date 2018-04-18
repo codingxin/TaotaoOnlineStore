@@ -3,57 +3,28 @@ package com.taotao.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
-public class TbOrderShipping implements Serializable {
-    /**
-     * 订单ID
-     */
+public class TbOrderShipping implements Serializable{
     private String orderId;
 
-    /**
-     * 收货人全名
-     */
     private String receiverName;
 
-    /**
-     * 固定电话
-     */
     private String receiverPhone;
 
-    /**
-     * 移动电话
-     */
     private String receiverMobile;
 
-    /**
-     * 省份
-     */
     private String receiverState;
 
-    /**
-     * 城市
-     */
     private String receiverCity;
 
-    /**
-     * 区/县
-     */
     private String receiverDistrict;
 
-    /**
-     * 收货地址，如：xx路xx号
-     */
     private String receiverAddress;
 
-    /**
-     * 邮政编码,如：310001
-     */
     private String receiverZip;
 
     private Date created;
 
     private Date updated;
-
-    private static final long serialVersionUID = 1L;
 
     public String getOrderId() {
         return orderId;
@@ -141,27 +112,5 @@ public class TbOrderShipping implements Serializable {
 
     public void setUpdated(Date updated) {
         this.updated = updated;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", orderId=").append(orderId);
-        sb.append(", receiverName=").append(receiverName);
-        sb.append(", receiverPhone=").append(receiverPhone);
-        sb.append(", receiverMobile=").append(receiverMobile);
-        sb.append(", receiverState=").append(receiverState);
-        sb.append(", receiverCity=").append(receiverCity);
-        sb.append(", receiverDistrict=").append(receiverDistrict);
-        sb.append(", receiverAddress=").append(receiverAddress);
-        sb.append(", receiverZip=").append(receiverZip);
-        sb.append(", created=").append(created);
-        sb.append(", updated=").append(updated);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
     }
 }

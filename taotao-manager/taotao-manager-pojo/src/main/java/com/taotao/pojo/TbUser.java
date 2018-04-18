@@ -3,34 +3,20 @@ package com.taotao.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
-public class TbUser implements Serializable {
+public class TbUser implements Serializable{
     private Long id;
 
-    /**
-     * ÓÃ»§Ãû
-     */
     private String username;
 
-    /**
-     * ÃÜÂë£¬¼ÓÃÜ´æ´¢
-     */
     private String password;
 
-    /**
-     * ×¢²áÊÖ»úºÅ
-     */
     private String phone;
 
-    /**
-     * ×¢²áÓÊÏä
-     */
     private String email;
 
     private Date created;
 
     private Date updated;
-
-    private static final long serialVersionUID = 1L;
 
     public Long getId() {
         return id;
@@ -86,23 +72,5 @@ public class TbUser implements Serializable {
 
     public void setUpdated(Date updated) {
         this.updated = updated;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", username=").append(username);
-        sb.append(", password=").append(password);
-        sb.append(", phone=").append(phone);
-        sb.append(", email=").append(email);
-        sb.append(", created=").append(created);
-        sb.append(", updated=").append(updated);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
     }
 }

@@ -7,7 +7,6 @@
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-
 	<!-- post乱码过滤器 -->
 	<filter>
 		<filter-name>CharacterEncodingFilter</filter-name>
@@ -30,24 +29,12 @@
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:spring/springmvc.xml</param-value>
 		</init-param>
-
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>taotao-manager-web</servlet-name>
 		<!-- 拦截所有请求jsp除外 -->
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-
-
-
-
-
-
-
-
-
-
-
+	
 </web-app>

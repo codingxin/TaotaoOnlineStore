@@ -3,54 +3,28 @@ package com.taotao.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
-public class TbContent implements Serializable {
+public class TbContent implements Serializable{
     private Long id;
 
-    /**
-     * 内容类目ID
-     */
     private Long categoryId;
 
-    /**
-     * 内容标题
-     */
     private String title;
 
-    /**
-     * 子标题
-     */
     private String subTitle;
 
-    /**
-     * 标题描述
-     */
     private String titleDesc;
 
-    /**
-     * 链接
-     */
     private String url;
 
-    /**
-     * 图片绝对路径
-     */
     private String pic;
 
-    /**
-     * 图片2
-     */
     private String pic2;
 
     private Date created;
 
     private Date updated;
 
-    /**
-     * 内容
-     */
     private String content;
-
-    private static final long serialVersionUID = 1L;
 
     public Long getId() {
         return id;
@@ -138,27 +112,5 @@ public class TbContent implements Serializable {
 
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", categoryId=").append(categoryId);
-        sb.append(", title=").append(title);
-        sb.append(", subTitle=").append(subTitle);
-        sb.append(", titleDesc=").append(titleDesc);
-        sb.append(", url=").append(url);
-        sb.append(", pic=").append(pic);
-        sb.append(", pic2=").append(pic2);
-        sb.append(", created=").append(created);
-        sb.append(", updated=").append(updated);
-        sb.append(", content=").append(content);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
     }
 }

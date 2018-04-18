@@ -2,45 +2,22 @@ package com.taotao.pojo;
 
 import java.io.Serializable;
 
-public class TbOrderItem implements Serializable {
+public class TbOrderItem implements Serializable{
     private String id;
 
-    /**
-     * 商品id
-     */
     private String itemId;
 
-    /**
-     * 订单id
-     */
     private String orderId;
 
-    /**
-     * 商品购买数量
-     */
     private Integer num;
 
-    /**
-     * 商品标题
-     */
     private String title;
 
-    /**
-     * 商品单价
-     */
     private Long price;
 
-    /**
-     * 商品总金额
-     */
     private Long totalFee;
 
-    /**
-     * 商品图片地址
-     */
     private String picPath;
-
-    private static final long serialVersionUID = 1L;
 
     public String getId() {
         return id;
@@ -104,24 +81,5 @@ public class TbOrderItem implements Serializable {
 
     public void setPicPath(String picPath) {
         this.picPath = picPath == null ? null : picPath.trim();
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", itemId=").append(itemId);
-        sb.append(", orderId=").append(orderId);
-        sb.append(", num=").append(num);
-        sb.append(", title=").append(title);
-        sb.append(", price=").append(price);
-        sb.append(", totalFee=").append(totalFee);
-        sb.append(", picPath=").append(picPath);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
     }
 }
