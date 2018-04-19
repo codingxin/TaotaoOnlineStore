@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class TbItem implements Serializable{
+	//页面展示部分
+	//未在TbItem定义的属性在TbItemService中补全
     private Long id;
 
     private String title;

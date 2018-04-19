@@ -3,6 +3,7 @@
        data-options="singleSelect:false,collapsible:true,pagination:true,url:'/item/list',method:'get',pageSize:30,toolbar:toolbar">
     <thead>
         <tr>
+<!--名字和数据库中定义一样 -->
         	<th data-options="field:'ck',checkbox:true"></th>
         	<th data-options="field:'id',width:60">商品ID</th>
             <th data-options="field:'title',width:200">商品标题</th>
@@ -17,6 +18,9 @@
         </tr>
     </thead>
 </table>
+<!-- EasyUI中datagrid控件要求的数据格式为：
+{total:"2",rows:[{"id":"1","name":"张三"}
+,{"id":"2","name":"李四"}]} -->
 <div id="itemEditWindow" class="easyui-window" title="编辑商品" data-options="modal:true,closed:true,iconCls:'icon-save',href:'/rest/page/item-edit'" style="width:80%;height:80%;padding:10px;">
 </div>
 <script>

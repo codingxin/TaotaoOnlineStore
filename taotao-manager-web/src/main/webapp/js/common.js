@@ -148,7 +148,7 @@ var TT = TAOTAO = {
     		});
     	});
     },
-    
+    //创建付文本编辑器，传进选择器
     createEditor : function(select){
     	return KindEditor.create(select, TT.kingEditorParams);
     },
