@@ -43,6 +43,9 @@ $(function(){
         }
 	});
 });
+
+
+
 function menuHandler(item){
 	var tree = $("#contentCategory");
 	var node = tree.tree("getSelected");
