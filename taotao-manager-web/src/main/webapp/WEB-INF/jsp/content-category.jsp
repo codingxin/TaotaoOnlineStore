@@ -3,7 +3,8 @@
 	 <ul id="contentCategory" class="easyui-tree">
     </ul>
 </div>
-<div id="contentCategoryMenu" class="easyui-menu" style="width:120px;" data-options="onClick:menuHandler">
+<div id="contentCategoryMenu" class="easyui-menu" style="width:120px;" 
+data-options="onClick:menuHandler">
     <div data-options="iconCls:'icon-add',name:'add'">添加</div>
     <div data-options="iconCls:'icon-remove',name:'rename'">重命名</div>
     <div class="menu-sep"></div>
@@ -15,6 +16,7 @@ $(function(){
 		url : '/content/category/list',
 		animate: true,
 		method : "GET",
+		//操作右键菜单
 		onContextMenu: function(e,node){
             e.preventDefault();
             $(this).tree('select',node.target);
@@ -23,6 +25,7 @@ $(function(){
                 top: e.pageY
             });
         },
+        //光标离开
         onAfterEdit : function(node){
         	var _tree = $(this);
         	if(node.id == 0){
@@ -37,7 +40,7 @@ $(function(){
         				$.messager.alert('提示','创建'+node.text+' 分类失败!');
         			}
         		});
-        	}else{
+        	}else{//重命名
         		$.post("/content/category/update",{id:node.id,name:node.text});
         	}
         }
@@ -45,10 +48,10 @@ $(function(){
 });
 
 
-
+//item点击的哪一项
 function menuHandler(item){
 	var tree = $("#contentCategory");
-	var node = tree.tree("getSelected");
+	var node = tree.tree("getSelected");//节点变为选中，“===”绝对相等
 	if(item.name === "add"){
 		tree.tree('append', {
             parent: (node?node.target:null),
@@ -65,7 +68,7 @@ function menuHandler(item){
 	}else if(item.name === "delete"){
 		$.messager.confirm('确认','确定删除名为 '+node.text+' 的分类吗？',function(r){
 			if(r){
-				$.post("/content/category/delete/",{parentId:node.parentId,id:node.id},function(){
+				$.post("/content/category/delete/",{id:node.id},function(){
 					tree.tree("remove",node.target);
 				});	
 			}

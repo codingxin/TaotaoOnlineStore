@@ -77,7 +77,6 @@ var contentListToolbar = [{
 				if(data.pic2){
 					$("#contentEditForm [name=pic2]").after("<a href='"+data.pic2+"' target='_blank'><img src='"+data.pic2+"' width='80' height='50'/></a>");					
 				}
-				
 				contentEditEditor.html(data.content);
 			}
 		});    	
