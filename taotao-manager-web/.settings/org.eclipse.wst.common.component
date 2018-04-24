@@ -16,9 +16,6 @@
         <dependent-module archiveName="taotao-content-interface-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/taotao-content-interface/taotao-content-interface">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="fastdfs-client-java-1.27-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/fastdfs-client-java/fastdfs-client-java">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <property name="context-root" value="taotao-manager-web"/>
         <property name="java-output-path" value="/taotao-manager-web/target/classes"/>
     </wb-module>
