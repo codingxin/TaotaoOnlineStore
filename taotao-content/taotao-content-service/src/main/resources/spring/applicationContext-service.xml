@@ -13,8 +13,8 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
 	<!-- 配置包扫描器，扫描所有带@Service注解的类 -->
-	<context:component-scan
-		base-package="com.taotao.content.service" />
+	<context:component-scan base-package="com.taotao.content.service" />
+	
 	<!-- 发布dubbo服务 -->
 	<!-- 提供方应用信息，用于计算依赖关系 -->
 	<dubbo:application name="taotao-content" />
