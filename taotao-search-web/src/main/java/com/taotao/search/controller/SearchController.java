@@ -20,7 +20,9 @@ public class SearchController {
 
 	@RequestMapping("/search")
 	public String search(@RequestParam("q") String queryString, @RequestParam(defaultValue = "1") Integer page,
-			Model model) {
+			Model model) throws Exception{
+		//int a=1/0;
+		
 		// 调用服务执行查询
 		try {
 			//把查询条件转码，解决get乱码问题

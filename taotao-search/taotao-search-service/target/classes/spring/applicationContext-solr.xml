@@ -9,9 +9,15 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 	
 	<!-- 单机版solr的连接 -->
-	<bean id="httpSolrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
+	<!-- <bean id="httpSolrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
 	<constructor-arg name="baseURL" value="http://122.152.226.53:8080/solr/collection1"></constructor-arg>
+	</bean> -->
+	<!-- 集群版 -->
+	<bean id="cloudSolrServe" class="org.apache.solr.client.solrj.impl.CloudSolrServer">
+	<constructor-arg name="zkHost" value="122.152.226.53:2181,122.152.226.53:2182,122.152.226.53:2183"></constructor-arg>
+	<property name="defaultCollection" value="collection2" />
 	</bean>
+	
 	
 
 </beans>

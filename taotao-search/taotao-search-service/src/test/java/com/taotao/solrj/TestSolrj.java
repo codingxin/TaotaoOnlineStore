@@ -47,7 +47,9 @@ public class TestSolrj {
 	@Test
 	public void searchDocument() throws Exception {
 		// 创建一个SolrServer对象
-		SolrServer solrServer = new HttpSolrServer("http://122.152.226.53:8080/solr/collection1");
+		//SolrServer solrServer = new HttpSolrServer("http://122.152.226.53:8080/solr/collection1");
+
+		SolrServer solrServer = new HttpSolrServer("http://122.152.226.53:8380/solr/collection2");
 		// 创建一个SolrQuery对象
 		SolrQuery query = new SolrQuery();
 		// 设置查询条件，过滤条件，分页调教，排序调教，高亮
