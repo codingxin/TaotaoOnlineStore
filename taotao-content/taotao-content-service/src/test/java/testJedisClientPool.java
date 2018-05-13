@@ -4,6 +4,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.taotao.jedis.JedisClient;
 
+
 public class testJedisClientPool {
 	@Test
 	public void testJedisClientPool() {
