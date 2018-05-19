@@ -69,10 +69,10 @@ public class ItemServiceImpl implements ItemService {
 	public TbItem getItemById(long itemId) {
 		// 查询数据库之前 ，先查询缓存
 		try {
-			String json=JedisClient.get(ITEM_INFO + ":" + itemId + ":BASE");
-			if(StringUtils.isNotBlank(json))
-			{//把json数据转换成pojo
-				TbItem tbItem=JsonUtils.jsonToPojo(json, TbItem.class);
+			// tbcont：7：username
+			String json = JedisClient.get(ITEM_INFO + ":" + itemId + ":BASE");
+			if (StringUtils.isNotBlank(json)) {// 把json数据转换成pojo
+				TbItem tbItem = JsonUtils.jsonToPojo(json, TbItem.class);
 				return tbItem;
 			}
 		} catch (Exception e) {
@@ -80,8 +80,9 @@ public class ItemServiceImpl implements ItemService {
 		}
 		// 缓存中没有查询数据库
 		TbItem item = itemMapper.selectByPrimaryKey(itemId);
-      
+
 		try {// 那字符转化为JSON, 把查询结果添加到缓存
+				// redis全部存的是字符串，将pojo转换成字符串
 			JedisClient.set(ITEM_INFO + ":" + itemId + ":BASE", JsonUtils.objectToJson(item));
 			// 设置过期时间，提高缓存利用率
 			JedisClient.expire(ITEM_INFO + ":" + itemId + ":BASE", ITEM_EXPIRE);
@@ -147,43 +148,28 @@ public class ItemServiceImpl implements ItemService {
 
 	@Override
 	public TbItemDesc geTbItemDescById(long itemId) {
-	// 查询数据库之前 ，先查询缓存
-				try {
-					String json=JedisClient.get(ITEM_INFO + ":" + itemId + ":BASE");
-					if(StringUtils.isNotBlank(json))
-					{//把json数据转换成pojo
-						TbItemDesc tbItemDesc=JsonUtils.jsonToPojo(json, TbItemDesc.class);
-						return tbItemDesc;
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-				// 缓存中没有查询数据库
-				TbItemDesc itemDesc = descmapper.selectByPrimaryKey(itemId);
-		      
-				try {// 那字符转化为JSON, 把查询结果添加到缓存
-					JedisClient.set(ITEM_INFO + ":" + itemId + ":DESC", JsonUtils.objectToJson(itemDesc));
-					// 设置过期时间，提高缓存利用率
-					JedisClient.expire(ITEM_INFO + ":" + itemId + ":DESC", ITEM_EXPIRE);
+		// 查询数据库之前 ，先查询缓存
+		try {
+			String json = JedisClient.get(ITEM_INFO + ":" + itemId + ":BASE");
+			if (StringUtils.isNotBlank(json)) {// 把json数据转换成pojo
+				TbItemDesc tbItemDesc = JsonUtils.jsonToPojo(json, TbItemDesc.class);
+				return tbItemDesc;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		// 缓存中没有查询数据库
+		TbItemDesc itemDesc = descmapper.selectByPrimaryKey(itemId);
 
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+		try {// 那字符转化为JSON, 把查询结果添加到缓存
+			JedisClient.set(ITEM_INFO + ":" + itemId + ":DESC", JsonUtils.objectToJson(itemDesc));
+			// 设置过期时间，提高缓存利用率
+			JedisClient.expire(ITEM_INFO + ":" + itemId + ":DESC", ITEM_EXPIRE);
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 		return itemDesc;
 	}
 

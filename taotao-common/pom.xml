@@ -15,7 +15,12 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 		</dependency>
-
+		<!-- servlet-api组件 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<!-- 时间操作组件 -->
 		<dependency>
 			<groupId>joda-time</groupId>

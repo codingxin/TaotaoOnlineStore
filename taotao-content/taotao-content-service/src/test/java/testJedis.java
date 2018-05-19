@@ -8,10 +8,9 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisCluster;
 import redis.clients.jedis.JedisPool;
 
-
 public class testJedis {
 	@Test
-	public void testJedisPool() {
+	public void testJedisPool() throws Exception{
 		// 创建一个数据库连接池对象（单例，即一个系统共用一个连接池），需要指定服务的IP和端口号
 		JedisPool jedisPool = new JedisPool("122.152.226.53", 6379);
 		// 从连接池中获得连接
