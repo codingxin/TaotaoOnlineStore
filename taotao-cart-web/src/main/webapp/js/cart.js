@@ -22,6 +22,7 @@ var TTCart = {
 			});
 		});
 		$(".decrement").click(function(){//-
+			//sibling取兄弟节点
 			var _thisInput = $(this).siblings("input");
 			if(eval(_thisInput.val()) == 1){
 				return ;

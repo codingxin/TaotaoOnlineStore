@@ -15,7 +15,7 @@ import com.taotao.pojo.TbItemExample.Criteria;
 
 public class TestPageHelper {
 
-	@Test
+	//@Test
 	public void testPageHelper() throws Exception {
 		//1.在mybatis的配置文件中配置分页插件
 		//2.在执行查询之前配置分页条件。使用PageHelper的静态方法
@@ -25,7 +25,7 @@ public class TestPageHelper {
 		TbItemMapper itemMapper = applicationContext.getBean(TbItemMapper.class);
 		//创建Example对象
 		TbItemExample example = new TbItemExample();
-//		Criteria criteria = example.createCriteria();
+        //Criteria criteria = example.createCriteria();
 		List<TbItem> list = itemMapper.selectByExample(example);
 		//4.取分页信息。使用PageInfo对象取。
 		PageInfo<TbItem> pageInfo = new PageInfo<>(list);

@@ -6,7 +6,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;  
   
 public class JedisClientPool implements JedisClient {  
-  
+    //单例连接池
     @Autowired  
     private JedisPool jedisPool;  
   

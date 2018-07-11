@@ -13,7 +13,7 @@ import com.taotao.utils.FastDFSClient;
   
 public class TestFastDfs {  
      
-    @Test  
+    //@Test  
     public void testUploadFile() throws Exception{  
         //1.向工程添加jar包  
         //2.创建一个配置文件，配置tracker服务器地址  
@@ -37,7 +37,7 @@ public class TestFastDfs {
             System.out.println(file);  
         }  
     }  
-    @Test
+    //@Test
 	public void testFastDFSClient() throws Exception {
 		FastDFSClient fastDFSClient = new FastDFSClient(
 				"F:\\TaotaoOnlineStore\\taotao-manager-web\\src\\main\\resources\\resource\\client.conf");

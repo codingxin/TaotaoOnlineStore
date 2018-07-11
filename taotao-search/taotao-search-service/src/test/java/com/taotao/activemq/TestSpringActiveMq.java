@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestSpringActiveMq {
-	@Test
+	//@Test
 	public void testActiveMq() throws Exception {
 		// 初始化Spring容器
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(

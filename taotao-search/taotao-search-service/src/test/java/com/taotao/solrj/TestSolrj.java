@@ -14,7 +14,7 @@ import org.junit.Test;
 
 public class TestSolrj {
 
-	@Test
+	//@Test
 	public void testAddDocument() throws Exception {
 		// 创建一个SolrServer对象，创建一个HttpSolrServer对象
 		// 需要指定solr服务的url
@@ -30,21 +30,21 @@ public class TestSolrj {
 		// 提交
 		solrServer.commit();
 	}
-
+	//@Test
 	public void deleteDocumentById() throws Exception {
 		SolrServer solrServer = new HttpSolrServer("http://www.xilixili.me:8080/solr/collection1");
 		solrServer.deleteById("test001");
 		// 提交
 		solrServer.commit();
 	}
-
+	//@Test
 	public void deleteDocumentByQuery() throws Exception {
 		SolrServer solrServer = new HttpSolrServer("http://www.xilixili.me:8080/solr/collection1");
 		solrServer.deleteByQuery("item_title:测试商品1");
 		solrServer.commit();
 	}
 
-	@Test
+	//@Test
 	public void searchDocument() throws Exception {
 		// 创建一个SolrServer对象
 		//SolrServer solrServer = new HttpSolrServer("http://122.152.226.53:8080/solr/collection1");

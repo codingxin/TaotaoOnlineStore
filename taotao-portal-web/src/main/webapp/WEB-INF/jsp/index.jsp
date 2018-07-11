@@ -6,9 +6,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>淘淘网上商城-综合网购首选（JD.COM）-正品低价、品质保障、货到付款、配送及时、放心服务、轻松购物！</title>
-<meta name="description" content="淘淘JD.COM-专业的综合网上购物商城，在线销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品、在线旅游等数万个品牌千万种优质商品。便捷、诚信的服务，为您提供愉悦的网上商城购物体验! ">
-<meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,淘淘商城">
+<title>长理网上商城网上商城-综合网购首选（JD.COM）-正品低价、品质保障、货到付款、配送及时、放心服务、轻松购物！</title>
+<meta name="description" content="长理网上商城JD.COM-专业的综合网上购物商城，在线销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品、在线旅游等数万个品牌千万种优质商品。便捷、诚信的服务，为您提供愉悦的网上商城购物体验! ">
+<meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,长理网上商城商城">
 <link href="/css/taotao.css" rel="stylesheet"/>
 <script type="text/javascript">
 	window.pageConfig={
@@ -209,7 +209,7 @@ pageConfig.DATA_MScroll =[
 </div><!--da end-->
 <div id="jdnews" class="m m1" >
 <div class="mt">
-<h2>淘淘快报</h2>
+<h2>长理网上商城快报</h2>
 <div class="extra" clstag="homepage|keycount|home2013|11a"><a href="http://www.jd.com/moreSubject.aspx" target="_blank">更多快报&nbsp;&gt;</a></div>
 </div>
 <div class="mc">
@@ -258,7 +258,7 @@ pageConfig.DATA_MScroll =[
 <!--virtuals end-->
 <span class="clr"></span>
 </div>
-<!-- 幻灯片, 公信力, 淘淘快报, 虚拟产品 end -->
+<!-- 幻灯片, 公信力, 长理网上商城快报, 虚拟产品 end -->
  
 <div id="floors-list">
 <div class="w w1" data-fid="0" id="electronics">

@@ -15,7 +15,7 @@ import org.springframework.jms.core.MessageCreator;
 public class SpringActivemq {
 
 	//使用jsmTemplate 发送消息
-	@Test
+	//@Test
 	public void testJmsTemplate() throws Exception {
 		//初始化spring容器
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/applicationContext-activemq.xml");
